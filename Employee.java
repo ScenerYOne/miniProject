@@ -47,7 +47,8 @@ public class Employee extends Member{
     }
 
     public String toString() {
-        return "Employee{" +
+        return  super.toString()+
+                "Employee{" +
                 "employeeID='" + employeeID + '\'' +
                 ", employeeName='" + employeeName + '\'' +
                 ", address='" + address + '\'' +

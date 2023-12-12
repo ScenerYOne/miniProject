@@ -48,7 +48,8 @@ public class Student extends Member {
     }
 
     public String toString() {
-        return "Student{" +
+        return super.toString()+
+                "Student{" +
                 "studentID='" + studentID + '\'' +
                 ", studentName='" + studentName + '\'' +
                 ", expirationDate=" + expirationDate +
