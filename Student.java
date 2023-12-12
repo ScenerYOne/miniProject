@@ -9,14 +9,13 @@ public class Student extends Member {
     public Student() {
     }
 
-<<<<<<< HEAD
     public Student(String memberID, String studentID, String studentName, Date expirationDate, Date applicationDate) {
         super(memberID);
-=======
+
     public Student(String memberID,String studentID, String studentName) {
         super(memberID);
         Date exDate = new Date();
->>>>>>> be4acb0274953cb1ec527938949e6f02596eee1e
+
         this.studentID = studentID;
         this.studentName = studentName;
         this.expirationDate = exDate;
