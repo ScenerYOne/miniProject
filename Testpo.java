@@ -1,27 +1,21 @@
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Testpo {
     public static void main(String[] args) {
-        ArrayList<Student> members = new ArrayList<Student>();
+        Calendar calendar = Calendar.getInstance();
+        Date currentDate = calendar.getTime(); // วันที่ปัจจุบัน
 
-        Date expirationDate1 = new Date(); 
-        Date applicationDate1 = new Date(); 
-        members.add(new Student("65100021", "AAA", expirationDate1, applicationDate1));
+        calendar.add(Calendar.DAY_OF_MONTH, 5); // เพิ่ม 5 วัน
+        Date futureDate = calendar.getTime(); // วันที่อีก 5 วันข้างหน้า
 
-        Date expirationDate2 = new Date(); 
-        Date applicationDate2 = new Date();
-        members.add(new Student("65100022", "BBB", expirationDate2, applicationDate2));
-
-        Date expirationDate3 = new Date(); 
-        Date applicationDate3 = new Date(); 
-        members.add(new Student("65100023", "CCC", expirationDate3, applicationDate3));
-
-       
-        System.out.println("Input details:");
-        for (Student student : members) {
-            System.out.println("Student ID: " + student.getStudentID() + " Name: " + student.getStudentName());    
-            System.out.println("Expiration Date: " + student.getExpirationDate() +", Application Date: " + student.getApplicationDate());
+        ArrayList<Student> member = new ArrayList<Student>();
+        member.add(new Student("AN12", "11111", "Jimmy", currentDate, futureDate));
+        member.add(new Student("AN13", "11111", "Jimmy1", currentDate, futureDate));
+        member.add(new Student("AN11", "11111", "Jimmy2", currentDate, futureDate));
+        for (Student x : member) {
+            System.out.println(x.toString());
         }
     }
 }

@@ -10,7 +10,8 @@ public class Student extends Member {
     public Student() {
     }
 
-    public Student(String studentID, String studentName, Date expirationDate, Date applicationDate) {
+    public Student(String memberID, String studentID, String studentName, Date expirationDate, Date applicationDate) {
+        super(memberID);
         this.studentID = studentID;
         this.studentName = studentName;
         this.expirationDate = expirationDate;

@@ -7,8 +7,8 @@ public class Employee extends Member{
     public Employee() {
     }
 
-    public Employee(String memberID , String memberName,String employeeID, String employeeName, String address, String phoneNumber) {
-        super(memberID, memberName);
+    public Employee(String memberID,String employeeID, String employeeName, String address, String phoneNumber) {
+        super(memberID);
         this.employeeID = employeeID;
         this.employeeName = employeeName;
         this.address = address;
