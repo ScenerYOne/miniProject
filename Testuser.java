@@ -1,12 +1,18 @@
-import java.util.ArrayList;
+
+import java.util.*;
 public class Testuser {
     public static void main(String[] args) {
 
-    ArrayList<Student> member = new ArrayList<>();
-    member.add(new Student(65100021 , "AAA", "test11"));
-    member.add(new Student(65100022 , "BBB", "test12"));
-    member.add(new Student(65100023 , "CCC", "test13"));
-                  
+    Date expirationDate = new Date();
+
+
+    ArrayList<Student> member = new ArrayList<Student>();
+    member.add(new Student("00000","11111","Jimmy"));
+    member.add(new Student("00000","11111","Jimmy"));
+    member.add(new Student("00000","11111","Jimmy"));
+    for(Student x:member){
+       System.out.println( x.toString());
+    }
 
     }
-}
+    }
