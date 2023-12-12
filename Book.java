@@ -7,7 +7,7 @@ public class Book {
     private int yearOfPublication;
     private int numberOfBooks;
     
-     public String getBookCode() {
+    public String getBookCode() {
         return bookCode;
     }
 
