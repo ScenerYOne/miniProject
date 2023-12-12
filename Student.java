@@ -1,3 +1,5 @@
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 public class Student extends Member {
     private String studentID;
@@ -49,11 +51,9 @@ public class Student extends Member {
 
     public String toString() {
         return super.toString()+
-                "Student{" +
-                "studentID='" + studentID + '\'' +
-                ", studentName='" + studentName + '\'' +
-                ", expirationDate=" + expirationDate +
-                ", applicationDate=" + applicationDate +
-                '}';
+                "StudentID : "+studentID+
+                "\nStudentName : " + studentName+
+                "\nExpirationDate : "+ expirationDate+
+                "\nAplicationDate : "+ applicationDate;
     }
 }
