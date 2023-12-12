@@ -1,5 +1,4 @@
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.Date;
 public class Student extends Member {
     private String studentID;
@@ -10,12 +9,18 @@ public class Student extends Member {
     public Student() {
     }
 
+<<<<<<< HEAD
     public Student(String memberID, String studentID, String studentName, Date expirationDate, Date applicationDate) {
         super(memberID);
+=======
+    public Student(String memberID,String studentID, String studentName) {
+        super(memberID);
+        Date exDate = new Date();
+>>>>>>> be4acb0274953cb1ec527938949e6f02596eee1e
         this.studentID = studentID;
         this.studentName = studentName;
-        this.expirationDate = expirationDate;
-        this.applicationDate = applicationDate;
+        this.expirationDate = exDate;
+        this.applicationDate = addDate(exDate, 5);
     }
 
     public String getStudentID() {
@@ -48,6 +53,13 @@ public class Student extends Member {
 
     public void setApplicationDate(Date applicationDate) {
         this.applicationDate = applicationDate;
+    }
+
+    private Date addDate(Date date,int days){
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.add(Calendar.DATE, days);
+        return calendar.getTime();
     }
 
     public String toString() {
